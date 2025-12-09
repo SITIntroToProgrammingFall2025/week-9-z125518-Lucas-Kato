@@ -27,7 +27,7 @@ int main() {
 
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
-            b[j][i] = a[i][j];
+            b[i][j] = a[i][2 - j]; 
         }
     }
     

@@ -31,14 +31,11 @@ int main() {
         count++;
     }
     
-    for (int i = 0; i < count; i++){
-         printf("The hex code is %c", hex[i]);
-    }
+     printf("The hex code is %s", hex);
     
-    
-
     return 0;
 }
+
 
 
 

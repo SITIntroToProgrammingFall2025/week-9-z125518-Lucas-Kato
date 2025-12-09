@@ -4,56 +4,56 @@
 #include <stdio.h>
 
 int main() {
-    int a[3][2];
-    int b[2][3];
-    int c[3][3];
+    int a[2][3];   // first matrix 2x3
+    int b[3][2];   // second matrix 3x2
+    int c[2][2];   // result 2x2
     int i, j, k;
 
-    // Input Matrix A (3x2)
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 2; j++) {
+    // Read matrix A (2x3)
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
             scanf("%d", &a[i][j]);
         }
     }
 
-    // Input Matrix B (2x3)
-    for (i = 0; i < 2; i++) {
-        for (j = 0; j < 3; j++) {
+    // Read matrix B (3x2)
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 2; j++) {
             scanf("%d", &b[i][j]);
         }
     }
 
-    // ------------ PRINTS ADAPTADOS ------------
+    // Print A
     printf("The first matrix you entered is\n");
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 2; j++) {
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 3; j++) {
             printf("%d ", a[i][j]);
         }
         printf("\n");
     }
 
+    // Print B
     printf("The second matrix you entered is\n");
-    for (i = 0; i < 2; i++) {
-        for (j = 0; j < 3; j++) {
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 2; j++) {
             printf("%d ", b[i][j]);
         }
         printf("\n");
     }
-    // -------------------------------------------
 
-    // Multiply matrices
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 3; j++) {
+    // Multiply matrices → result = 2x2
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
             c[i][j] = 0;
-            for (k = 0; k < 2; k++) {
+            for (k = 0; k < 3; k++) {
                 c[i][j] += a[i][k] * b[k][j];
             }
         }
     }
 
-    printf("The multiplication product of matrix A and matrix B :\n");
-    for (i = 0; i < 3; i++) {
-        for (j = 0; j < 3; j++) {
+    printf("The multiplication product of matrix A and matrix B:\n"); 
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
             printf("%d ", c[i][j]);
         }
         printf("\n");
@@ -61,5 +61,7 @@ int main() {
 
     return 0;
 }
+
+
 
 

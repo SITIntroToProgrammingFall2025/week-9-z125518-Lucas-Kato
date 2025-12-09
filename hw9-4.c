@@ -32,12 +32,13 @@ int main() {
     }
     
     for (int i = 0; i < count; i++){
-        printf("%c", hex[i]);
+         printf("The hex code is %c", hex[i]);
     }
     
     
 
     return 0;
 }
+
 
 
